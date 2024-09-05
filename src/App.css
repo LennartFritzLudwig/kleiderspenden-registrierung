@@ -1,0 +1,135 @@
+/* App.css */
+/* Globale Styles für die Kleiderspenden-Registrierungs-App */
+
+/* Grundlegende Styles für den Body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Container für die gesamte App */
+.App {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Styles für den Header */
+header {
+  background-color: #4a90e2;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Styles für das Logo */
+.logo {
+  background-color: #fff;
+  color: #4a90e2;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Styles für die Navigation */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Styles für Formulare */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Styles für Fehlermeldungen */
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+
+/* Styles für den Footer */
+footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Styles für die Bestätigungsseite */
+.confirmation-page {
+  background-color: #e8f5e9;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Media Query für Responsive Design */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+}
