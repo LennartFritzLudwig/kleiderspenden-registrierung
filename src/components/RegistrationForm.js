@@ -130,6 +130,7 @@ class RegistrationForm extends React.Component {
                 onChange={this.handleChange}
                 required
               />
+              <p>Hinweis: Abholung nur im PLZ-Gebiet 12XXX möglich (Geschäftsstelle: 12345)</p>
               {this.state.formErrors.postcode && <p className="error">{this.state.formErrors.postcode}</p>}
             </div>
           </>

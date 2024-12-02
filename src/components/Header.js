@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-function Header() {
+function Header({ onPageChange }) {
   return (
     <header>
       {/* Logo-Platzhalter */}
@@ -15,9 +15,9 @@ function Header() {
       {/* Navigationsmenü */}
       <nav>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">Über uns</a></li>
-          <li><a href="/contact">Kontakt</a></li>
+          <li><a href="#" onClick={() => onPageChange('home')}>Home</a></li>
+          <li><a href="#" onClick={() => onPageChange('about')}>Über uns</a></li>
+          <li><a href="#" onClick={() => onPageChange('contact')}>Kontakt</a></li>
         </ul>
       </nav>
     </header>

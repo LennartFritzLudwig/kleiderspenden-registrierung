@@ -1,24 +1,23 @@
 // App.js
-// Hauptkomponente der Anwendung
-
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import RegistrationForm from './components/RegistrationForm';
 import ConfirmationPage from './components/ConfirmationPage';
+import AboutUs from './components/AboutUs';
+import Contact from './components/Contact';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    // Initialer Zustand der Anwendung
     this.state = {
-      isSubmitted: false, // Gibt an, ob das Formular abgeschickt wurde
-      submittedData: null // Speichert die übermittelten Formulardaten
+      isSubmitted: false,
+      submittedData: null,
+      currentPage: 'home'
     };
   }
 
-  // Methode zum Verarbeiten der Formularübermittlung
   handleFormSubmit = (formData) => {
     this.setState({
       submittedData: formData,
@@ -26,17 +25,24 @@ class App extends React.Component {
     });
   };
 
+  handlePageChange = (page) => {
+    this.setState({ currentPage: page });
+  };
+
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header onPageChange={this.handlePageChange} />
         <main>
-          {/* Zeigt entweder das Registrierungsformular oder die Bestätigungsseite an */}
-          {!this.state.isSubmitted ? (
-            <RegistrationForm onSubmit={this.handleFormSubmit} />
-          ) : (
-            <ConfirmationPage formData={this.state.submittedData} />
+          {this.state.currentPage === 'home' && (
+            !this.state.isSubmitted ? (
+              <RegistrationForm onSubmit={this.handleFormSubmit} />
+            ) : (
+              <ConfirmationPage formData={this.state.submittedData} />
+            )
           )}
+          {this.state.currentPage === 'about' && <AboutUs />}
+          {this.state.currentPage === 'contact' && <Contact />}
         </main>
         <Footer />
       </div>
